@@ -1,0 +1,227 @@
+/* Variables */
+$color-main: #fed136;
+$color-title: #222222;
+$color-subtitle: #777777;
+$text-color-light: #ffffff;
+$font-main: "Montserrat", sans-serif;
+$font-sub: 'PT Serif', serif;
+$font-description: 'Roboto Slab', serif;
+
+/* Global */
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    max-width: 1140px;
+}
+.list-item {
+    display: inline-block;
+}
+.list-item a, .navigation a {
+    text-decoration: none;
+}
+section {
+    margin: 0 auto;
+    text-align: center;
+    padding: 120px 0;    
+}
+.section-title {
+    font-family: $font-main;
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: $color-title;
+}
+.section-subtitle {
+    font-family: $font-sub;
+    font-size: 20px;
+    color: $color-subtitle;
+}
+.section-info {
+    margin-bottom: 80px;
+}
+
+/* Header */
+.header {
+    position: relative;
+    height: 100vh;
+    background-image: url("../images/header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.header::before {
+    position: absolute;
+    content: "";
+    background-color: $color-title;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: 0;
+}
+.header-welcome {
+    position: absolute;
+    margin-top: 36px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: $text-color-light;
+    text-align: center;
+}
+.welcome-greetings {
+    font-size: 48px;
+    font-family: $font-sub;
+}
+.header-welcome .welcome-greetings span {
+    font-size: 80px;
+    font-family: $font-main;
+    margin: 20px 0;
+    display: inline-block;
+}
+.button {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $font-main;
+    color: inherit;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-main;
+    text-align: center;
+    padding: 20px 50px;
+    margin-top: 20px;
+}
+
+/* Navigation */
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.navigation .logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    margin: 0 auto;    
+    color: $color-main;
+    font-family: 'Rouge Script', cursive;
+    font-size: 36px;
+    font-weight: 700;
+}
+.navigation .list-item {
+    margin: 0 20px;
+}
+.navigation .list-item a {
+    color: $text-color-light;
+    font-family: $font-main;
+    font-weight: 400;
+}
+
+/* Services */
+.services {
+    background-color: #ffffff;
+}
+.services i {
+    font-size: 35px;
+    color: $color-main;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    border: 3px solid $color-main;
+    border-radius: 50%;
+    line-height: 80px;
+}
+.box-title {
+    font-family: $font-main;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.box-description {
+    font-family: $font-description;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+/* Portfolio */
+.portfolio {
+    background-color: #f7f7f7;
+    padding-bottom: 60px;
+}
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.portfolio-image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.description-box {
+    background-color: $text-color-light;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.box-subtitle {
+    font-family: $font-sub;
+}
+
+/* Footer */
+footer {
+    margin: 40px auto;
+}
+footer a {
+    font-size: 0;
+}
+.footer-social {
+    text-align: center;
+}
+.footer-copyrights {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: $font-main;
+}
+footer i {
+    font-size: 30px;
+    text-align: center;
+    color: $text-color-light;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: $color-title;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .navigation .logo {
+        text-align: center;
+    }
+    .navigation .navbar {
+        padding: 30px 0;
+        margin: auto;
+        text-align: center;
+    }
+    .navigation .list-item a {
+        font-size: 12px;
+    }
+
+    .footer-copyrights {
+        text-align: center;
+    }
+}
